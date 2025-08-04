@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samuel Kibunywa Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+
+<style>
+  body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: rgba(215, 218, 221, 0.993); /* soft bluish-gray tone to contrast dark sidebar */
+      color: dimgray;
+      scroll-behavior: smooth; /* enables smooth scroll between anchors */
+      margin-left: 240px; /* match sidebar width + spacing. offsets layout to accommodate fixed sidebar width */
+    }
+
+    header {
+      background: linear-gradient(135deg, royalblue, deepskyblue); /* vibrant gradient for top banner */
+      color: white;
+      padding: 1em 1em;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle depth */
+}
+
+    h1 {
+      font-size: 2.6em;
+      margin: 0;
+    }
+    h2 {
+      color: royalblue;
+      font-size: 1.8em;
+      margin-bottom: 1em;
+    }
+    h3 {
+      color: royalblue;
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      margin-top: 0.4em;
+    }
+
+.profile-card {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* circular image */
+  object-fit: cover;
+  border: 3px solid gold; /* highlights image */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* subtle depth */
+  margin-bottom: 10px;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh; /* full vertical height */
+  background-color: lightsteelblue; /* soft blue sidebar */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* edge shadow for separation */
+  z-index: 1000; /* keeps it above main content */
+}
+
+
+nav a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: navy;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: cornflowerblue;  /* hover feedback */
+  color: white;
+}
+
+  section {
+      padding: 3em 2em;
+      max-width: 960px;
+      margin: auto;
+    }
+
+
+
+.project {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.06); /* soft panel shadow */
+    padding: 2em;
+    margin-bottom: 3em;
+    
+}
+  .skills {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.06); /* soft panel shadow */
+    padding: 2em;
+    margin-bottom: 3em;
+ 
+}
+
+.btn {
+  display: inline-block;
+  background: royalblue;
+  color: white;
+  padding: 0.8em 1.5em;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1.2em;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: navy; /* darker shade on hover */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.8em;
+  border-bottom: 1px solid lightgray; /* subtle divider */
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: gainsboro;  /* light, neutral tone */
+  font-size: 0.80em;
+  color: gray;
+}
+
+a {
+  color: royalblue;
+}
+
+form {
+  margin-top: 1em;
+  background: white;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+label {
+  font-weight: bold;
+  color: royalblue;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 0.5em;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 600px) {    /* adjusts for smaller screens like mobile phones */
+  h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 2em 1em;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+  }
+}
+
+.services-footer {
+  background-color: #1f1f1f;  /* deep charcoal */
+  color: #e0e0e0;            /* soft off-white */
+  padding: 30px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8em;         /* reduces overall font size slightly */
+}
+
+
+.footer-content {
+  max-width: 600px;
+  width: 100%;
+}
+
+.services-footer h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #ffffff; /* Pure white — ensures high contrast and clarity for header text on dark backgrounds */
+}
+
+.services-footer li {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #cccccc; /* Light gray — softens list item visibility slightly while maintaining readability */
+}
+
+.services-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-content .copyright {
+  margin-top: 24px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999999; /* Medium gray — a more muted tone for secondary or subtle content like copyright */
+}
+
+
+
+</style>
+  
+
+</head>
+
+
+<body>
+  <header>
+    <h1> Junior software developer</h1>
+    <p class="tagline">Innovation and perfection be my daily snack</p>
+    <nav>
+      <div class="profile-card">
+        <img src="profile.jpg" alt="profile image" class="profile-img">
+        <h4>Samuel Kibunywa</h4>
+        <p>Turning data into actionable insights</p>
+      </div>
+      <a href="#About">About</a>
+      <a href="#skills">Skills</a>
+       <a href="#project">Project</a>
+      <a href="#Education">Education</a>
+      <a href="#Learning and goals">Learning & Goals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section id="About"class ="About">
+    <h2>About</h2>
+    <p>I specialize in building tools that combine data analysis with software development to solve real-world challenges across public health, economics, and community monitoring. As a junior data analyst expanding into full-stack development, I use these projects to experiment with scalable, visual, and actionable insights.</p>
+
+    <h4>Interests</h4>
+    <ul>
+      <li>📊 Data Analytics</li>
+      <li>💻 Software Development</li>
+      <li>🌍 AI and Machine Learning</li>
+      <li>📈 Economic Research</li>
+      <li>📚 Continuous Learning</li>
+    </ul>
+  </section>
+
+
+  <section id="skills" class="skills">
+    <h3> Technical Skill Set</h3>
+      <h4> Core Themes</h4>
+    <ul>
+      <li><strong>Applied Statistics:</strong> Statistical modelling, indicator tracking, data cleaning, public reporting</li>
+      <li><strong>Software Development:</strong> Web development, Automating analytics workflows, creating user interfaces, integrating APIs</li>
+      <li><strong>Dashboarding & Storytelling:</strong> Tableau, Python, and R  for interactive analytics</li>
+      <li><strong>Programming</strong> Python, R, Javascript, SQL for data manipulation</li>
+    </ul>
+    <table>
+      <tr><th>Area</th><th>Tools & Capabilities</th></tr>
+      <tr><td>📈 Statistical Modeling</td><td>Time series, regression, forecasting (R, Python) among others</td></tr>
+      <tr><td>📊 Data Analysis</td><td>R (tidyverse), Python (pandas, matplotlib), SQL (joins, filtering)</td></tr>
+      <tr><td>📉 Dashboarding</td><td>Tableau, R Shiny for CPI & indicator dashboards</td></tr>
+      <tr><td>🧹 Automation</td><td>Cleaning scripts, CSV-to-dashboard pipelines</td></tr>
+      <tr><td>📡 M&E Tools</td><td>Indicator tracking, KPI templates</td></tr>
+      <tr><td>🌍 Software Dev (Learning)</td><td>HTML, CSS, JavaScript, Node.js </td></tr>
+    </table>
+  </section>
+
+    <section id="project" class="project">
+    <h3> Featured Project — Forecasting Inflation rates in Kenya(investor-ready)</h3>
+    <p> Used SARIMA modeling in R and Python to forecast CPI trends</p>
+    <p> Designed Tableau dashboards with automated CSV export pipelines</p>
+    <p> Delivered stakeholder-ready insights for policy planning</p>
+    <a href="https://github.com/kibunywasam/Projects" class="btn" target="_blank">View GitHub Repo</a>
+  </section>
+
+    <section id="Education" class="Education">
+    <h3>📚 Education bakground</h3>
+    <ul>
+      <h4>Software Development Certification</h4>
+        <ul>
+          <li>in progress</li>
+          <li>Expected Completion: October 2025</li>
+          <li>Focus: Full-stack web development</li>
+        </ul>
+      <h4>Bachelor of science in Applied Statistics with Computing</h4>
+        <ul>
+          <li>Moi University</li>
+          <li>Expected Graduation: 2025</li>
+        </ul>
+      <h4>Kenya Certificate of Secondary Education</h4>
+        <ul>
+          <li>Kijabe Boys' High School</li>
+          <li>Graduated: 2020</li>
+          <li>Achievement: B(Plain)</li>
+        </ul>
+    </ul> 
+    <br><hr>
+    <a href="Samuel_Kibunywa_CV.pdf" download class="btn">📄 Download CV</a>
+
+  </section>
+
+  <section id="Learning and goals">
+    <h3>🚀 Learning & Future Goals</h3>
+    <ul>
+      <li>Expanding full-stack capabilities with modern web tech</li>
+      <li>Designing proposals for impact-driven tools</li>
+      <li>Building interfaces that empower non-technical users</li>
+    </ul>
+  </section>
+
+<section id="contact">
+  <h3>🤝 Let’s Connect</h3>
+  <p>If you're building in the private or public sector, analytics, or software-for-good, I’d love to collaborate.</p>
+
+  <form action="https://formspree.io/f/xrblaqol" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="_replyto" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit" class="btn">Send Inquiry</button>
+  </form>
+
+  <p>You can also email me directly: <a href="mailto:kibunywasam@gmail.com">kibunywasam@gmail.com</a></p>
+  <br>
+  <hr>
+  
+  <a href="#">Back to top</a>
+</section>
+
+
+
+  <footer class="services-footer">
+     <div class="footer-content">
+    <h2>✨ Services Offered</h2>
+    <ul>
+      <li> Web Design & Development</li>
+      <li> SEO Optimization</li>
+      <li> E-commerce Solutions</li>
+      <li> Site Maintenance</li>
+      <li> Data & Analytics Setup</li>
+      <li> Branding & Graphics</li>
+    </ul>
+    <br>
+    <p class="copyright" >© 2025 Samuel Kibunywa | Eldoret, Kenya | Data and software for Impact</p>
+  </div>
+   
+  </footer>
+</body>
+</html>
