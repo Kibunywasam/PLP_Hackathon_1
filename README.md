@@ -1,8 +1,8 @@
 #  Samuel Kibunywa — Developer Portfolio
 
-[Click here to visit the website]( https://kibunywasam.github.io/PLP_Hackathon_1/)
+[Click here to visit the website (Github pages)]( https://kibunywasam.github.io/PLP_Hackathon_1/)
 
-[OR Click here ](https://lucky-gecko-5a7ba4.netlify.app/)
+[OR Click here (Netlify)](https://lucky-gecko-5a7ba4.netlify.app/)
 
 
 ##  Project Description
