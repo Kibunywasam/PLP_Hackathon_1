@@ -1,5 +1,10 @@
 #  Samuel Kibunywa — Developer Portfolio
 
+[Click here to visit the website]( https://kibunywasam.github.io/PLP_Hackathon_1/)
+
+[OR Click here ](https://lucky-gecko-5a7ba4.netlify.app/)
+
+
 ##  Project Description
 This is a **personal portfolio website** built entirely with **HTML and CSS** to showcase my profile, skills, projects, and career aspirations. It was developed as part of the **Power Learn Project Africa Hackathon**, adhering strictly to the competition guidelines (no JavaScript or libraries).
 
